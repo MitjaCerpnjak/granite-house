@@ -1,0 +1,23 @@
+﻿@model GraniteHouse.Models.Recap
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="text-info">Delete recap</h2>
+
+<form method="post" asp-action="Delete" class="form-group">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-6">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="Name" />
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-primary" value="Delete" />
+        <a asp-action="Index" class="btn btn-success">Back to list</a>
+    </div>
+</form>
+

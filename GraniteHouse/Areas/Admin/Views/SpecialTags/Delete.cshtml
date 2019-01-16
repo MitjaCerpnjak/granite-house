@@ -1,0 +1,24 @@
+﻿@model GraniteHouse.Models.SpecialTags
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="text-info">Delete Tag Details</h2>
+
+<form method="post" asp-action="Delete">
+    <div class="p-4 border">
+        <div class="form-group row">
+            <input type="hidden" asp-for="Id" />
+            <div class="col-2">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <input type="submit" value="Delete" asp-route-id="@Model.Id" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-success">Back to list</a>
+        </div>
+    </div>
+</form>

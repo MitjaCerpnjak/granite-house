@@ -1,0 +1,26 @@
+﻿@model GraniteHouse.Models.Recap
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 class="text-info">Create recap</h2>
+
+<form method="post" asp-action="Create" class="form-group">
+    <div class="form-control">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-6">
+                <input type="text" asp-for="Name" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <input type="submit" class="btn btn-primary" value="Create" />
+            <a asp-action="Index" class="btn btn-success">Back to list</a>
+        </div>
+    </div>
+</form>
+

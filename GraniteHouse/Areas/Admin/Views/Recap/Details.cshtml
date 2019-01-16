@@ -1,0 +1,22 @@
+﻿@model GraniteHouse.Models.Recap
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="text-info">Recap Details</h2>
+
+<form method="post" asp-action="Details" class="form-group">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-6">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="Name" />
+        </div>
+    </div>
+    <div class="row">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-success">Back to list</a>
+    </div>
+</form>
